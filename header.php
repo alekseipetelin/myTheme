@@ -11,14 +11,22 @@
 <body>
         <header>
             <?php
-            if (is_single()){
-                      //    echo 'мы находимся на странице записей';
-                get_header('single');
-            } else {
+//            if (is_single()){
+//                      //    echo 'мы находимся на странице записей';
+//                get_header('single');
+//            } else {
 
 
-                wp_nav_menu();
-            }
+                wp_nav_menu([
+                    'container'       => 'div',
+                    'container_class' => '',
+                    'menu_class'      => 'nav',
+                    'menu_id'         => 'nav',
+                    'link_class'      => 'nav-link',
+//                    'depth'           => '2',
+
+                ]);
+//            }
             ?>
         </header>
         <main>

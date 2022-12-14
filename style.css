@@ -13,3 +13,37 @@
  *
  * Version:     1.0
  */
+
+.menu-class{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+/*чтобы перезагрузить со сбросом cash надо нажать ctrl+shift+R*/
+.active{
+    text-decoration: underline !important;
+}
+
+.nav-item{
+    list-style-type: none;
+}
+.sub-menu {
+    padding: 0;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    /*border: 1px solid black;*/
+    border-top: none;
+    border-radius:  0 0 10px 10px;
+    box-shadow: #000 0px 3px 4px;
+}
+
+.nav-item:hover > .sub-menu {
+    display: block;
+}
+
+.sub-menu .sub-menu{
+    /*display: none;*/
+    left: 100%;
+    top: 0;
+}
