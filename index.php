@@ -14,25 +14,7 @@ get_header();
             // перебираем все имеющиеся посты и выводим их
             while( have_posts() ){
                 the_post();
-                ?>
-                <div class="col-4">
-                    <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-                        <?php
-                            if (has_post_thumbnail() ){
-                                echo get_the_post_thumbnail($post->ID, 'thumbnail');
-                            } else {
-                                ?>
-                                <img src=" <?php echo get_template_directory_uri(); ?>/img/none_img.jpg" height="150">
-
-                                <?php
-                            }
-                        ?>
-
-                        <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                        <?php the_excerpt(); ?>
-                    </div>
-                </div>
-                <?php
+                get_template_part('post', 'content');
             }
             ?>
 
